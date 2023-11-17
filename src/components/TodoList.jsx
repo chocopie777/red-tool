@@ -3,12 +3,12 @@ import TodoItem from "./TodoItem";
 import {useSelector} from "react-redux";
 
 const TodoList = () => {
-    const todos = useSelector(state => state.todos.todos);
-    return (
-        <ul>
-            {todos.map(todo => <TodoItem key={todo.id} text={todo.text} id={todo.id} completed={todo.completed} />)}
-        </ul>
-    );
+  const todos = useSelector(state => state.todos.todos);
+  return (
+    <ul>
+      {todos.map(todo => <TodoItem key={todo.id} title={todo.title} id={todo.id} completed={todo.completed}/>)}
+    </ul>
+  );
 };
 
 export default TodoList;
